@@ -1,0 +1,56 @@
+.heading{
+    background-color: rgb(93, 139, 93);
+    height: 200px;
+    max-height: 100px;
+
+}
+.container{
+    background-color: yellow;
+    display: flex;
+    height: 500px;
+    gap: 100px;
+}
+.container1{
+    background-color: aqua;
+    height: 100px;
+    width: 100px; 
+    position: relative;
+    top: 100px;
+   
+  
+    
+}
+.container2{
+    background-color: rgb(219, 140, 21);
+    height: 100px;
+    width: 100px;
+    position: absolute;
+   
+}
+.container3{
+    background-color: rgb(139, 78, 142);
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 400px;
+}
+.container4{
+    background-color: rgb(222, 232, 232);
+    height: 100px;
+    width: 100px;
+    position: sticky;
+    top: 500px;
+
+}.container5{
+    background-color: rgb(116, 8, 8);
+    height: 1000px;
+    width: 1000px;
+}
+.abc{
+    background-color: rgb(14, 90, 115);
+    height: 100px;
+    width: 100px;
+    position: sticky;
+    top: 100px;
+}
+

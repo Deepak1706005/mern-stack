@@ -8,6 +8,8 @@ h2{
     text-decoration-style: dotted;
     text-decoration-line: overline;
     text-decoration-color: chocolate;
+    text-align: center;
+    
 }
 h3{
     text-transform: capitalize;
@@ -22,13 +24,4 @@ p{
     line-height: 20px;
     word-spacing: 30px;
     text-shadow: 5px 5px 10px rgb(185, 232, 30);
-
-}
-.heading
-{
-    background-color: green;
-}
-#head
-{
-    background-color: aquamarine;
 }

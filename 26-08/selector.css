@@ -1,0 +1,15 @@
+
+.heading
+{
+    background-color: green;
+}
+#head
+{
+    background-color: aquamarine;
+}
+p{
+    background-color: pink;
+}
+*{
+    background-color: yellow;
+}
