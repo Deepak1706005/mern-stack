@@ -12,4 +12,418 @@
         <p>I am done my BCA from SVGC Ghumarwin.</p>
         <p>My hobbies is <b>coding. </b>
     </body>
- </html>
+ </html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .title {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-weight: 300;
+            z-index: 2;
+            position: relative;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-right: 3px solid #e9ecef;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #e74c3c;
+        }
+
+        .objective-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 500;
+        }
+
+        .qualification-item {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qualification-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .qualification-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(231, 76, 60, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .qualification-item:hover::before {
+            opacity: 1;
+        }
+
+        .qual-degree {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .qual-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .qual-year {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .qual-board {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        .certifications {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cert-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .cert-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-weight: 500;
+            color: #34495e;
+            text-align: center;
+            position: relative;
+        }
+
+        .cert-item::before {
+            content: '✓';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .decorative-element {
+            position: absolute;
+            right: -50px;
+            top: 20%;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(231, 76, 60, 0.1));
+            border-radius: 50%;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .contact-info {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                order: 2;
+                border-right: none;
+                border-top: 3px solid #e9ecef;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="decorative-element"></div>
+        
+        <div class="header">
+            <h1 class="name">[Your Name]</h1>
+            <p class="title">Professional Educator & Teaching Specialist</p>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="section">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>📧 Email:</strong><br>
+                            your.email@example.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>📱 Phone:</strong><br>
+                            +91 XXXXX XXXXX
+                        </div>
+                        <div class="contact-item">
+                            <strong>📍 Location:</strong><br>
+                            Shimla, Himachal Pradesh
+                        </div>
+                        <div class="contact-item">
+                            <strong>💼 LinkedIn:</strong><br>
+                            linkedin.com/in/yourprofile
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Professional Certifications</h2>
+                    <div class="certifications">
+                        <div class="cert-item">
+                            <span class="highlight">HPTET Qualified</span>
+                        </div>
+                        <div class="cert-item">
+                            <span class="highlight">CTET Qualified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">Classroom Management</div>
+                        <div class="contact-item">Curriculum Development</div>
+                        <div class="contact-item">Student Assessment</div>
+                        <div class="contact-item">Educational Technology</div>
+                        <div class="contact-item">Lesson Planning</div>
+                        <div class="contact-item">Student Counseling</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h2 class="section-title">Career Objective</h2>
+                    <p class="objective-text">
+                        To obtain a teaching position in a reputable institution where I can apply my 
+                        knowledge and skills to inspire and educate students. As a dedicated educator 
+                        with strong qualifications including HPTET and CTET certifications, I am 
+                        committed to fostering a positive learning environment that encourages 
+                        student growth, creativity, and academic excellence.
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Academic Qualifications</h2>
+                    
+                    <div class="qualification-item">
+                        <div class="qual-degree">Bachelor of Education (B.Ed.)</div>
+                        <div class="qual-details">
+                            <span class="qual-board">H.P.U. Shimla</span>
+                            <span class="qual-year">2025</span>
+                        </div>
+                    </div>
+
+                    <div class="qualification-item">
+                        <div class="qual-degree">Master of Science (M.Sc.)</div>
+                        <div class="qual-details">
+                            <span class="qual-board">H.P.U. Shimla</span>
+                            <span class="qual-year">2023</span>
+                        </div>
+                    </div>
+
+                    <div class="qualification-item">
+                        <div class="qual-degree">Bachelor of Science (B.Sc.)</div>
+                        <div class="qual-details">
+                            <span class="qual-board">H.P.U. Shimla</span>
+                            <span class="qual-year">2021</span>
+                        </div>
+                    </div>
+
+                    <div class="qualification-item">
+                        <div class="qual-degree">12th Grade</div>
+                        <div class="qual-details">
+                            <span class="qual-board">HPBOSE Dharamshala</span>
+                            <span class="qual-year">2018</span>
+                        </div>
+                    </div>
+
+                    <div class="qualification-item">
+                        <div class="qual-degree">10th Grade</div>
+                        <div class="qual-details">
+                            <span class="qual-board">HPBOSE Dharamshala</span>
+                            <span class="qual-year">2016</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Teaching Philosophy</h2>
+                    <p class="objective-text">
+                        I believe that every student has the potential to succeed and grow. My teaching 
+                        approach focuses on creating an inclusive, engaging, and supportive learning 
+                        environment where students feel valued and motivated to reach their full potential. 
+                        I strive to make learning interactive, relevant, and meaningful for all students.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
