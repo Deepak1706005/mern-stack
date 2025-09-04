@@ -1,0 +1,114 @@
+/* @media screen {
+    .container{
+        background-color: yellow;
+    }
+} */
+
+
+/* @media print{
+    .container{
+        background-color: pink;
+        color: red;
+    }
+} */
+
+
+/* @media all{
+    .container{
+        background-color: blue;
+        color: antiquewhite;
+    }
+} */
+
+
+/* @media{
+    .container{
+        background-color: aqua;
+        color: blueviolet;
+    }
+} */
+
+
+/* @media (width:800px){
+    .container{
+        background-color: azure;
+color: greenyellow;
+    }
+    
+}
+
+
+
+@media (min-width:801px){
+    .container{
+        background-color: burlywood;
+        color: bisque;
+    }
+}
+
+
+
+
+@media (max-width:800px)
+{
+    .container{
+        background-color: rgb(45, 28, 5);
+        color: rgb(205, 137, 54);
+    }
+} */
+
+
+/* @media (height:800px){
+    .container{
+        background-color: azure;
+color: greenyellow;
+    }
+    
+}
+
+
+
+@media (min-height:801px){
+    .container{
+        background-color: burlywood;
+        color: bisque;
+    }
+}
+
+
+
+
+@media (max-height:800px)
+{
+    .container{
+        background-color: rgb(45, 28, 5);
+        color: rgb(205, 137, 54);
+    }
+} */
+
+/* 
+@media (orientation: portrait)
+{
+    .container{
+      background-color: rgb(168, 116, 39); 
+      color: rgb(69, 171, 171); 
+    }
+} */
+
+
+
+@media (max-width:800px) and (orientation: landscape)
+{
+    .container{
+        background-color: aqua;
+    }}
+    @media (max-width:800px) , (orientation: landscape){
+    .container{
+        background-color: aqua;
+    }
+} 
+ @media not (max-width:800px){
+    .container{
+        background-color: red;
+    }
+} 

@@ -1,0 +1,83 @@
+a:link{
+    color: black;
+    background-color: yellow;
+    font-size: 80px;
+}
+
+a:visited{
+    color: aquamarine;
+}
+
+a:hover{
+    color: red;
+}
+
+input:focus{
+    background-color: blueviolet;
+}
+
+
+li:first-child{
+    color: beige;
+}
+
+li:nth-child(3n-1)
+{
+    color: aquamarine;
+}
+
+
+/* h1::first-letter{
+    color: antiquewhite;
+    font-size: 90px;
+} */
+
+
+p::first-line{
+    color: blue;
+    font-size: 20px;
+}
+
+
+/* h1::after{
+    content: "  hii"  ;
+    color: brown; */
+}
+
+p::before{
+    content: "  hii";
+    color: rgb(221, 221, 58);
+}
+
+::selection{
+    background-color: rgb(19, 2, 8);
+    color: rgb(241, 242, 244);
+}
+
+
+
+.container1{
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    box-sizing: content-box;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid blue;
+
+}
+
+.container2{
+    background-color: rgb(27, 129, 59);
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid blue;
+}
+
+
+
+
+
