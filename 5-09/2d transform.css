@@ -1,0 +1,35 @@
+.container{
+    height: 200px;
+    width: 200px;
+    background-color: bisque;
+    /* transform: translate(200px,200px); */
+    /* transform: translateX(200px);
+
+    transform: translateY(200px); */
+
+
+
+
+    /* transform: scaleX(2);
+    transform: scaleY(2); */
+
+     /* transform: scale(2,2); */
+
+
+
+
+     /* transform: skew(45deg,50deg); */
+
+     /* transform: skewX(50deg);
+     transform: skewY(20deg); */
+
+
+     /* transform: rotate(50deg); */
+
+
+
+     transform: matrix(1,0,0,1,200,200);
+
+ 
+
+}

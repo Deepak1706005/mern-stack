@@ -1,6 +1,6 @@
 a:link{
-    color: black;
-    background-color: yellow;
+    color: rgb(12, 3, 3);
+    background-color: rgb(209, 209, 170);
     font-size: 80px;
 }
 
@@ -32,7 +32,6 @@ li:nth-child(3n-1)
     font-size: 90px;
 } */
 
-
 p::first-line{
     color: blue;
     font-size: 20px;
@@ -41,8 +40,8 @@ p::first-line{
 
 /* h1::after{
     content: "  hii"  ;
-    color: brown; */
-}
+    color: brown;
+} */
 
 p::before{
     content: "  hii";
@@ -50,8 +49,8 @@ p::before{
 }
 
 ::selection{
-    background-color: rgb(19, 2, 8);
-    color: rgb(241, 242, 244);
+    background-color: rgb(200, 21, 84);
+    color: rgb(144, 159, 190);
 }
 
 
@@ -63,7 +62,7 @@ p::before{
     box-sizing: content-box;
     padding: 10px;
     margin: 10px;
-    border: 5px solid blue;
+    border: 5px dotted blue;
 
 }
 

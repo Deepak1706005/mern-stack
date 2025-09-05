@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 200vh;
+    width: 200vw;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+
+}
+
+.item{
+    height: 10%;
+    width: 10%;
+    background-color: aqua;
+}
+
+#rotatex:hover{
+    transform: rotate(50deg);
+}
+
+#rotatey:hover{
+    transform: rotate(60deg);
+}
+#rotatez:hover{
+    transform: rotate(70deg);
+}
+
+#translatex:hover{
+    transform: translateX(200px);
+}
+#translatey:hover{
+    transform: translateX(200px);
+}
+
+#translatez:hover{
+    transform:perspective(500px) translatez(200px);
+}
+
+#scalex:hover{
+    transform: scaleX(2);
+}
+#scaley:hover{
+    transform: scaley(3);
+}
+#scalez:hover{
+    transform: scalez(2);
+}

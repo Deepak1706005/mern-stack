@@ -5,7 +5,7 @@
 } */
 
 
-/* @media print{
+/* @media print{ 
     .container{
         background-color: pink;
         color: red;
@@ -13,12 +13,12 @@
 } */
 
 
-/* @media all{
+@media all{
     .container{
         background-color: blue;
         color: antiquewhite;
     }
-} */
+}
 
 
 /* @media{
@@ -97,7 +97,7 @@ color: greenyellow;
 
 
 
-@media (max-width:800px) and (orientation: landscape)
+/* @media (max-width:800px) and (orientation: landscape)
 {
     .container{
         background-color: aqua;
@@ -111,4 +111,4 @@ color: greenyellow;
     .container{
         background-color: red;
     }
-} 
+}  */
