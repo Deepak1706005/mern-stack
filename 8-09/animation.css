@@ -1,0 +1,40 @@
+body{
+    background-color: aqua;
+    box-sizing: border-box;
+    padding: o;
+}
+.container{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(211, 19, 55);
+    animation-name: movement;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+}
+@keyframes movement{
+    0%{
+        top:0;
+        left: 0;
+    }
+    25%{
+
+        top:0;
+        left: 700px;
+    }
+    50%{
+        
+        top: 300px;
+        left: 700px;
+    }
+    75%
+    {
+        
+        top:0;
+        left:0;
+    }
+    
+}

@@ -48,5 +48,5 @@ body{
     transform: scaley(3);
 }
 #scalez:hover{
-    transform: scalez(2);
+    transform: scalez();
 }
