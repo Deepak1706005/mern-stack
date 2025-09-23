@@ -12,7 +12,7 @@
     background-color: red;
     height: 200px;
     width: 200px;
-    flex-grow: 1;
+    flex-grow: 4;
 }
 .container2{
     background-color: yellow;
@@ -25,5 +25,5 @@
     background-color: green;
     height: 200px;
     width: 200px;
-    flex-grow: 1;
+    flex-grow: 3;
 }
