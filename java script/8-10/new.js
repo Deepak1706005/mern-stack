@@ -1,0 +1,11 @@
+let a = [1,"deepak",23.21, true]
+// a.push("rishi", "amit")
+// a.pop(23.21)
+//  a.shift(1)
+//  a.unshift(1)
+// a.splice(2,1)
+// a.splice(2,1,10)
+// a.splice(1,2,10,11)
+console.log(a)
+let b = a.join("  ->    ")
+console.log(b)

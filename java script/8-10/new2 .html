@@ -1,0 +1,134 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">hellow</h1>
+    <p class="info">Paragraph 1</p>
+    <p class="info">Paragraph 2</p>
+<script src="new2.js"></script>
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM All Methods Example</title>
+  <style>
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="mainHeading">Hello, DOM!</h1>
+  <p class="info">This is the first paragraph.</p>
+  <p class="info">This is the second paragraph.</p>
+  <div id="container"></div>
+  <br>
+
+  <button id="changeColorBtn">Change Color</button>
+  <button id="toggleClassBtn">Toggle Highlight</button>
+  <button id="addParaBtn">Add Paragraph</button>
+  <button id="removeParaBtn">Remove Last Paragraph</button>
+
+  <script>
+    // ---------------------------------------------
+    // 1️⃣ getElementById()
+    // ---------------------------------------------
+    let heading = document.getElementById("mainHeading");
+    console.log("Using getElementById:", heading.innerText);
+    heading.style.color = "purple";  // Change text color using style.color
+    heading.style.fontSize = "30px"; // Change font size
+
+    // ---------------------------------------------
+    // 2️⃣ getElementsByClassName()
+    // ---------------------------------------------
+    let paragraphs = document.getElementsByClassName("info");
+    console.log("Using getElementsByClassName:", paragraphs[0].innerText);
+    paragraphs[1].style.color = "green"; // Style second paragraph
+
+    // ---------------------------------------------
+    // 3️⃣ getElementsByTagName()
+    // ---------------------------------------------
+    let allParas = document.getElementsByTagName("p");
+    console.log("Using getElementsByTagName: Total paragraphs =", allParas.length);
+
+    // ---------------------------------------------
+    // 4️⃣ innerHTML and innerText
+    // ---------------------------------------------
+    heading.innerHTML = "<u>DOM Demonstration in JavaScript</u>"; // Change content (HTML)
+    console.log("innerText example:", heading.innerText);
+
+    // ---------------------------------------------
+    // 5️⃣ setAttribute(), getAttribute(), removeAttribute()
+    // ---------------------------------------------
+    heading.setAttribute("title", "This is a tooltip for heading");
+    console.log("getAttribute example:", heading.getAttribute("title"));
+    heading.removeAttribute("title"); // Remove attribute
+    console.log("Attribute removed");
+
+    // ---------------------------------------------
+    // 6️⃣ style, color, font size
+    // ---------------------------------------------
+    paragraphs[0].style.color = "red";
+    paragraphs[0].style.fontSize = "20px";
+
+    // ---------------------------------------------
+    // 7️⃣ classList.add(), classList.remove(), classList.toggle()
+    // ---------------------------------------------
+    // add class
+    paragraphs[0].classList.add("highlight");
+    // remove class
+    paragraphs[0].classList.remove("highlight");
+    // toggle class (adds if not present, removes if present)
+    document.getElementById("toggleClassBtn").addEventListener("click", function() {
+      heading.classList.toggle("highlight");
+    });
+
+    // ---------------------------------------------
+    // 8️⃣ appendChild()
+    // ---------------------------------------------
+    let container = document.getElementById("container");
+    document.getElementById("addParaBtn").addEventListener("click", function() {
+      let newP = document.createElement("p");
+      newP.innerText = "This is a newly added paragraph!";
+      container.appendChild(newP);
+    });
+
+    // ---------------------------------------------
+    // 9️⃣ removeChild()
+    // ---------------------------------------------
+    document.getElementById("removeParaBtn").addEventListener("click", function() {
+      let lastP = container.lastElementChild;
+      if (lastP) {
+        container.removeChild(lastP);
+      } else {
+        alert("No paragraphs to remove!");
+      }
+    });
+
+    // ---------------------------------------------
+    // 🔟 Extra Example — change style dynamically
+    // ---------------------------------------------
+    document.getElementById("changeColorBtn").addEventListener("click", function() {
+      heading.style.color = "orange";
+      heading.style.fontSize = "40px";
+      heading.innerText = "Color Changed!";
+    });
+
+  </script>x
+</body>
+</html>

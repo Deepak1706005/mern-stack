@@ -1,0 +1,158 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Data</title>
+    <!-- <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+        
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .form-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 12px;
+        }
+        
+        .input-box {
+            margin: 10px 0;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid black;
+        }
+        
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+    </style> -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Data</h1>
+        
+        <div class="form-box">
+            <h2>Student Information</h2>
+            
+            <div class="input-box">
+                <label>Roll Number:</label>
+                <input type="text" id="rollno">
+            </div>
+            
+            <div class="input-box">
+                <label>Name:</label>
+                <input type="text" id="name">
+            </div>
+            
+            <div class="input-box">
+                <label>Maths Score:</label>
+                <input type="text" id="maths">
+            </div>
+            
+            <div class="input-box">
+                <label>Physics Score:</label>
+                <input type="text" id="physics">
+            </div>
+            
+            <div class="input-box">
+                <label>Chemistry Score:</label>
+                <input type="text" id="chemistry">
+            </div>
+            
+            <div class="input-box">
+                <label>Total Score:</label>
+                <input type="text" id="total">
+            </div>
+            
+            <div class="input-box">
+                <label>Percentage:</label>
+                <input type="text" id="percentage">
+            </div>
+            
+            <div class="input-box">
+                <label>Result:</label>
+                <input type="text" id="result">
+            </div>
+
+            <button id="btn" onclick="Data()">Get Student Data</button>
+            
+        </div>
+    </div>
+
+    <script>
+        const StudentData = {
+            "rollno": 110,
+            "name": "Gurwinder Singh",
+            "Maths": 98,
+            "Physics": 95,
+            "Chemistry": 92
+        }
+
+        let isDataShown = false;
+
+        function Data() {
+            if (isDataShown == false) {
+                document.getElementById("rollno").value = StudentData.rollno;
+                document.getElementById("name").value = StudentData.name;
+                document.getElementById("maths").value = StudentData.Maths;
+                document.getElementById("physics").value = StudentData.Physics;
+                document.getElementById("chemistry").value = StudentData.Chemistry;
+                
+                let totalScore = StudentData.Maths + StudentData.Physics + StudentData.Chemistry;
+                document.getElementById("total").value = totalScore;
+                
+                let percentage = (totalScore / 300) * 100;
+                document.getElementById("percentage").value = percentage.toFixed(2) + "%";
+                
+                if (percentage >= 33) {
+                    document.getElementById("result").value = "PASS";
+                } else {
+                    document.getElementById("result").value = "FAIL";
+                }
+                
+                document.getElementById("btn").innerHTML = "Clear Form";
+                isDataShown = true;
+            } else {
+                document.getElementById("rollno").value = "";
+                document.getElementById("name").value = "";
+                document.getElementById("maths").value = "";
+                document.getElementById("physics").value = "";
+                document.getElementById("chemistry").value = "";
+                document.getElementById("total").value = "";
+                document.getElementById("percentage").value = "";
+                document.getElementById("result").value = "";
+                document.getElementById("result").className = "";
+                
+                document.getElementById("btn").innerHTML = "Get Student Data";
+                isDataShown = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
