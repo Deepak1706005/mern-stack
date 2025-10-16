@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            border: 1px solid black;
+            height: 600px;
+            width: 800px;
+            background-color: rgb(5, 3, 3);
+            background-size: cover;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+        }
+        
+        .controls {
+            background-color: azure;
+            border: 1px solid rgb(41, 196, 252);
+            display: flex;
+            flex-direction: row;
+            height: 20vh;
+            width: 20vw;
+            justify-self: center;
+        }
+        
+        #onbtn {
+            background-color: #ffffff;
+            margin: 50px 30px;
+        }
+        
+        #offbtn {
+            background-color: #ffffff;
+            margin: 50px 30px;
+        }
+        
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+
+            <img id="bulb" src="https://res.cloudinary.com/dcgghyuav/image/upload/v1751453496/bulb-off_rgjumy.jpg" alt="bulboff">
+
+            <img id="cat" src="https://res.cloudinary.com/dcgghyuav/image/upload/v1751453489/cat-off_pz4bri.jpg" alt="catoff">
+        </div><br>
+        <div class="controls">
+            <button id="onbtn"> SWITCH ON</button>
+            <button id="offbtn">SWITCH OFF</button>
+        </div>
+    </div>
+    <script>
+    const bulbOnURL = 'https://res.cloudinary.com/dcgghyuav/image/upload/v1751522915/bulb-on_va0euz.jpg';
+    const bulbOffURL = 'https://res.cloudinary.com/dcgghyuav/image/upload/v1751453496/bulb-off_rgjumy.jpg';
+    const catOnURL = 'https://res.cloudinary.com/deddpa6tv/image/upload/v1751530737/ChatGPT_Image_Jul_3_2025_01_48_38_PM_lycbx9.png';
+    const catOffURL = 'https://res.cloudinary.com/dcgghyuav/image/upload/v1751453489/cat-off_pz4bri.jpg';
+
+
+    const bulbImg = document.getElementById('bulb');
+    const catImg = document.getElementById('cat');
+    const onBtn = document.getElementById('onbtn');
+    const offBtn = document.getElementById('offbtn');
+
+
+    onBtn.addEventListener('click', () => {
+    bulbImg.src = bulbOnURL;
+    catImg.src = catOnURL;
+    });
+
+    offBtn.addEventListener('click', () => {
+    bulbImg.src = bulbOffURL;
+    catImg.src = catOffURL;
+});
+</script>
+</body>
+
+</html>
